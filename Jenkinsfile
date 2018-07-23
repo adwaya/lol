@@ -1,14 +1,9 @@
 #!/usr/bin/env groovy
 
 pipeline {
-
-    agent {
-        docker {
-            image 'node'
-            args '-u root'
-        }
-    }
-
+    // Make the output directory.
+    sh "mkdir -p output"
+    
     stages {
         stage('Build') {
             steps {
