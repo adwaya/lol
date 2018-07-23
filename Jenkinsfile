@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 
 pipeline {
+    agent {
     // Make the output directory.
     sh "mkdir -p output"
-    
+    }
     stages {
         stage('Build') {
             steps {
